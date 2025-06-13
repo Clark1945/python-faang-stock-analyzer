@@ -1,0 +1,46 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# 忽略整個 .idea 資料夾，除了特定檔案（可選）
+.idea/
+!.idea/codeStyles
+
+# 忽略 Python 相關
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 忽略 log 和暫存資料
+*.log
+*.tmp
+
+# 忽略 Excel 等暫時性檔案
+*.xlsx
+*.xls
+
+# 忽略虛擬環境（如果有）
+venv/
+env/
+
+# 忽略專案檔
+*.iml
+
+# 忽略 JetBrains 工作區相關檔案
+*.iws
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries
+.idea/httpRequests
+.idea/dataSources/
+.idea/dataSources.local.xml
+
+# 忽略系統檔案
+.DS_Store
