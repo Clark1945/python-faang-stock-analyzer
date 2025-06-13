@@ -4,8 +4,9 @@ import logging as log
 from datetime import datetime
 import pandas as pd
 import plotly.graph_objs as go
-import plotly.io as pio
-
+import dash
+from dash import dcc, html
+from dash.dependencies import Input, Output
 
 faang_stock_no = ['META', 'AAPL', 'AMZN', 'NFLX', 'GOOG']
 faang_stock_xlsx_filename = 'faang_stock_data.xlsx'
@@ -41,8 +42,6 @@ class FaangStockDataExporter:
         else:
             log.info("File not generated...some error happened!")
 
-
-
 class MonthlyStockDataAnalyzer:
     def __init__(self, file_name: str = faang_stock_xlsx_filename):
         self.file_name = file_name
@@ -53,6 +52,10 @@ class MonthlyStockDataAnalyzer:
         for element in stock_no_list:
             self.stock_data_pd[element] = data.xs(element, axis=1, level=1) # select from columns, select AAPL from columns
 
+    def get_stock_df(self, symbol):
+        return self.stock_data_pd.get(symbol)
+
+    @DeprecationWarning
     def plot_close_price(self):
         if not self.stock_data_pd:
             log.warning("No stock data available to plot.")
@@ -78,11 +81,81 @@ class MonthlyStockDataAnalyzer:
 
         fig.show()
 
-if __name__ == '__main__':
-    exporter = FaangStockDataExporter()
-    exporter.download_yahoo_finance_faang_data(faang_stock_no)
+exporter = FaangStockDataExporter()
+exporter.download_yahoo_finance_faang_data(faang_stock_no)
 
-    analyzer = MonthlyStockDataAnalyzer()
-    analyzer.read_excel_and_export_dataframe(faang_stock_no)
-    analyzer.plot_close_price()  # << 加這一行畫圖
+analyzer = MonthlyStockDataAnalyzer()
+analyzer.read_excel_and_export_dataframe(faang_stock_no)
+
+# Create Dash Web App
+app = dash.Dash(__name__)
+
+app.layout = html.Div([
+    html.H1("FAANG Stock CandleStick Charts", style={'textAlign': 'center', 'color': '#503D36', 'font-weight': 'bold'}),
+    html.P("Select a FAANG stock from the dropdown menu below:"),
+    dcc.Dropdown(
+        id='stock-selector',
+        options=[{'label': symbol, 'value': symbol} for symbol in faang_stock_no],
+        value='AAPL'
+    ),
+    dcc.Graph(id='candlestick-graph')
+])
+
+
+@app.callback(
+    Output('candlestick-graph', 'figure'),
+    [Input('stock-selector', 'value')]
+)
+def update_candlestick(symbol):
+    df = analyzer.get_stock_df(symbol)
+
+    if df is None or df.empty:
+        return go.Figure()
+
+    # 計算 MA (以 20 日為例)
+    df['MA20'] = df['Close'].rolling(window=20).mean()
+
+    # 繪製主圖 (K線 + MA20)
+    fig = go.Figure()
+
+    # CandleStick
+    fig.add_trace(go.Candlestick(
+        x=df.index,
+        open=df['Open'],
+        high=df['High'],
+        low=df['Low'],
+        close=df['Close'],
+        name='Candlestick'
+    ))
+    fig.update_layout(
+        title=f'{symbol} - CandleStick Chart (Last one month)',
+        xaxis_title='Date',
+        yaxis_title='Price (USD)',
+        template='plotly_dark'
+    )
+
+    # MA20 線
+    fig.add_trace(go.Scatter(
+        x=df.index,
+        y=df['MA20'],
+        mode='lines',
+        line=dict(color='orange', width=1.5),
+        name='MA20'
+    ))
+    fig.update_layout(
+        title=f'{symbol} - CandleStick Chart with MA20 (Last one month)',
+        xaxis_title='Date',
+        yaxis_title='Price (USD)',
+        template='plotly_dark'
+    )
+
+    return fig
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+    # analyzer.plot_close_price()  # << 加這一行畫圖
 

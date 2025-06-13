@@ -1,0 +1,57 @@
+2025-06-13 20:58:02,917 - INFO - Start downloading FAANG stock data...
+2025-06-13 20:58:02,921 - INFO - Failed to create TzCache, reason: Error creating TzCache folder: 'C:\Users\clark\AppData\Local\py-yfinance' reason: [WinError 183] 當檔案已存在時，無法建立該檔案。: 'C:\\Users\\clark\\AppData\\Local\\py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+2025-06-13 20:58:05,080 - INFO - downloaded successfully and save as faang_stock_data.xlsx
+2025-06-13 21:15:39,725 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 21:17:38,001 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 21:17:38,689 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 21:20:42,862 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 21:20:43,450 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 21:23:20,838 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 21:23:21,333 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 21:27:56,927 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 21:27:57,840 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 21:32:48,301 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 21:32:48,799 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 21:44:22,037 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 21:44:23,453 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 22:00:58,115 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 22:00:58,325 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 22:00:59,318 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 22:04:08,099 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 22:04:24,135 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 22:05:39,149 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 22:05:46,600 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:12:46,699 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:12:48,352 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 23:13:49,521 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:13:50,033 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 23:24:43,988 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:24:45,483 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 23:25:05,578 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:25:05,746 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 23:25:07,205 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:27:11,395 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:27:12,142 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 23:27:40,611 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:27:40,957 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 23:27:42,802 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:28:11,676 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:28:16,451 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:28:16,713 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-06-13 23:28:17,732 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:34:53,181 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
+2025-06-13 23:35:14,736 - INFO - File Existed!:faang_stock_data.xlsx. Process will be skipped
