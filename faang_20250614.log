@@ -28,3 +28,337 @@
 2025-06-14 00:16:16,108 - INFO - Dash is running on http://127.0.0.1:8050/
 
 2025-06-14 00:16:17,002 - INFO - File Existed!:faang_stock_data_20250614.xlsx. Process will be skipped
+2025-06-14 06:40:31,316 - INFO - File Existed!:faang_stock_data_20250614.xlsx. Process will be skipped
+2025-06-14 06:40:32,654 - INFO - Dash is running on http://0.0.0.0:10000/
+
+2025-06-14 06:40:32,682 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://192.168.1.109:10000
+2025-06-14 06:40:32,682 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 06:41:47,319 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:47] "GET / HTTP/1.1" 200 -
+2025-06-14 06:41:47,548 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:47] "GET /_dash-component-suites/dash/deps/polyfill@7.v3_0_4m1749828041.12.1.min.js HTTP/1.1" 200 -
+2025-06-14 06:41:47,705 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:47] "GET /_dash-component-suites/dash/deps/react@18.v3_0_4m1749828041.3.1.min.js HTTP/1.1" 200 -
+2025-06-14 06:41:47,713 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:47] "GET /_dash-component-suites/dash/deps/react-dom@18.v3_0_4m1749828041.3.1.min.js HTTP/1.1" 200 -
+2025-06-14 06:41:47,715 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:47] "GET /_dash-component-suites/dash/deps/prop-types@15.v3_0_4m1749828041.8.1.min.js HTTP/1.1" 200 -
+2025-06-14 06:41:47,726 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:47] "GET /_dash-component-suites/dash/dash-renderer/build/dash_renderer.v3_0_4m1749828041.min.js HTTP/1.1" 200 -
+2025-06-14 06:41:47,730 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:47] "GET /_dash-component-suites/dash/dcc/dash_core_components.v3_0_6m1749828041.js HTTP/1.1" 200 -
+2025-06-14 06:41:47,888 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:47] "GET /_dash-component-suites/dash/dcc/dash_core_components-shared.v3_0_6m1749828041.js HTTP/1.1" 200 -
+2025-06-14 06:41:48,033 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:48] "GET /_dash-component-suites/dash/html/dash_html_components.v3_0_2m1749828041.min.js HTTP/1.1" 200 -
+2025-06-14 06:41:48,039 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:48] "GET /_dash-component-suites/dash/dash_table/bundle.v6_0_2m1749828041.js HTTP/1.1" 200 -
+2025-06-14 06:41:48,409 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:48] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 06:41:48,435 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:48] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 06:41:48,466 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:48] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 06:41:48,809 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:48] "GET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1" 200 -
+2025-06-14 06:41:48,811 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:48] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 200 -
+2025-06-14 06:41:48,819 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:48] "GET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1" 200 -
+2025-06-14 06:41:53,754 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:41:56,829 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:41:58,885 - INFO - 127.0.0.1 - - [14/Jun/2025 06:41:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:42:00,858 - INFO - 127.0.0.1 - - [14/Jun/2025 06:42:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:42:11,071 - INFO - 127.0.0.1 - - [14/Jun/2025 06:42:11] "GET / HTTP/1.1" 200 -
+2025-06-14 06:42:11,320 - INFO - 127.0.0.1 - - [14/Jun/2025 06:42:11] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 06:42:11,597 - INFO - 127.0.0.1 - - [14/Jun/2025 06:42:11] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 06:42:11,655 - INFO - 127.0.0.1 - - [14/Jun/2025 06:42:11] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 06:42:12,038 - INFO - 127.0.0.1 - - [14/Jun/2025 06:42:12] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 06:42:12,142 - INFO - 127.0.0.1 - - [14/Jun/2025 06:42:12] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 06:42:12,262 - INFO - 127.0.0.1 - - [14/Jun/2025 06:42:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:47:00,756 - INFO - 127.0.0.1 - - [14/Jun/2025 06:47:00] "GET / HTTP/1.1" 200 -
+2025-06-14 06:47:01,008 - INFO - 127.0.0.1 - - [14/Jun/2025 06:47:01] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 06:47:01,323 - INFO - 127.0.0.1 - - [14/Jun/2025 06:47:01] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 06:47:01,336 - INFO - 127.0.0.1 - - [14/Jun/2025 06:47:01] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 06:47:01,823 - INFO - 127.0.0.1 - - [14/Jun/2025 06:47:01] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 06:47:01,919 - INFO - 127.0.0.1 - - [14/Jun/2025 06:47:01] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 06:47:01,932 - INFO - 127.0.0.1 - - [14/Jun/2025 06:47:01] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 06:47:02,038 - INFO - 127.0.0.1 - - [14/Jun/2025 06:47:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:47:12,671 - INFO - 127.0.0.1 - - [14/Jun/2025 06:47:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:48:32,150 - INFO - File Existed!:faang_stock_data_20250614.xlsx. Process will be skipped
+2025-06-14 06:48:32,972 - INFO - Dash is running on http://0.0.0.0:10000/
+
+2025-06-14 06:48:33,018 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://192.168.1.109:10000
+2025-06-14 06:48:33,019 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 06:48:37,256 - INFO - 127.0.0.1 - - [14/Jun/2025 06:48:37] "GET / HTTP/1.1" 200 -
+2025-06-14 06:48:37,507 - INFO - 127.0.0.1 - - [14/Jun/2025 06:48:37] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 06:48:37,663 - INFO - 127.0.0.1 - - [14/Jun/2025 06:48:37] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 06:48:37,678 - INFO - 127.0.0.1 - - [14/Jun/2025 06:48:37] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 06:48:37,719 - INFO - 127.0.0.1 - - [14/Jun/2025 06:48:37] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 06:48:38,040 - INFO - 127.0.0.1 - - [14/Jun/2025 06:48:38] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 06:48:38,080 - INFO - 127.0.0.1 - - [14/Jun/2025 06:48:38] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 06:49:08,178 - INFO - 127.0.0.1 - - [14/Jun/2025 06:49:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:49:34,349 - INFO - 127.0.0.1 - - [14/Jun/2025 06:49:34] "GET / HTTP/1.1" 200 -
+2025-06-14 06:49:34,608 - INFO - 127.0.0.1 - - [14/Jun/2025 06:49:34] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 06:49:34,713 - INFO - 127.0.0.1 - - [14/Jun/2025 06:49:34] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 06:49:34,729 - INFO - 127.0.0.1 - - [14/Jun/2025 06:49:34] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 06:49:34,765 - INFO - 127.0.0.1 - - [14/Jun/2025 06:49:34] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 06:49:35,146 - INFO - 127.0.0.1 - - [14/Jun/2025 06:49:35] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 06:49:35,175 - INFO - 127.0.0.1 - - [14/Jun/2025 06:49:35] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 06:49:35,464 - INFO - 127.0.0.1 - - [14/Jun/2025 06:49:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:52:16,516 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:16] "GET / HTTP/1.1" 200 -
+2025-06-14 06:52:16,772 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:16] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 06:52:16,886 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:16] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 06:52:16,898 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:16] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 06:52:16,938 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:16] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 06:52:17,323 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:17] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 06:52:17,413 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:17] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 06:52:17,531 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:52:28,506 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:28] "GET / HTTP/1.1" 200 -
+2025-06-14 06:52:28,759 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:28] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 06:52:28,888 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:28] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 06:52:28,903 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:28] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 06:52:28,941 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:28] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 06:52:29,374 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:29] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 06:52:29,404 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:29] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 06:52:29,630 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:52:32,404 - INFO - 127.0.0.1 - - [14/Jun/2025 06:52:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 06:54:16,212 - INFO - File Existed!:faang_stock_data_20250614.xlsx. Process will be skipped
+2025-06-14 06:54:16,796 - INFO - Dash is running on http://0.0.0.0:10000/
+
+2025-06-14 06:54:16,812 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://192.168.1.109:10000
+2025-06-14 06:54:16,813 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 06:54:20,404 - INFO - 127.0.0.1 - - [14/Jun/2025 06:54:20] "GET / HTTP/1.1" 200 -
+2025-06-14 06:54:20,617 - INFO - 127.0.0.1 - - [14/Jun/2025 06:54:20] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 06:54:20,890 - INFO - 127.0.0.1 - - [14/Jun/2025 06:54:20] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 06:54:20,893 - INFO - 127.0.0.1 - - [14/Jun/2025 06:54:20] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 06:54:20,913 - INFO - 127.0.0.1 - - [14/Jun/2025 06:54:20] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 06:54:21,220 - INFO - 127.0.0.1 - - [14/Jun/2025 06:54:21] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 06:54:21,267 - INFO - 127.0.0.1 - - [14/Jun/2025 06:54:21] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 06:54:23,326 - INFO - 127.0.0.1 - - [14/Jun/2025 06:54:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:07:28,980 - INFO - File Existed!:faang_stock_data_20250614.xlsx. Process will be skipped
+2025-06-14 07:09:05,124 - INFO - Start downloading FAANG stock data...
+2025-06-14 07:09:06,721 - INFO - downloaded successfully and save as faang_stock_data_20250614.xlsx
+2025-06-14 07:09:07,058 - INFO - Dash is running on http://0.0.0.0:10000/
+
+2025-06-14 07:09:07,068 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://192.168.1.109:10000
+2025-06-14 07:09:07,068 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 07:09:12,548 - INFO - 127.0.0.1 - - [14/Jun/2025 07:09:12] "GET / HTTP/1.1" 200 -
+2025-06-14 07:09:12,784 - INFO - 127.0.0.1 - - [14/Jun/2025 07:09:12] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:09:12,990 - INFO - 127.0.0.1 - - [14/Jun/2025 07:09:12] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:09:13,005 - INFO - 127.0.0.1 - - [14/Jun/2025 07:09:13] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:09:13,016 - INFO - 127.0.0.1 - - [14/Jun/2025 07:09:13] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:09:13,356 - INFO - 127.0.0.1 - - [14/Jun/2025 07:09:13] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:09:13,404 - INFO - 127.0.0.1 - - [14/Jun/2025 07:09:13] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:09:14,821 - INFO - 127.0.0.1 - - [14/Jun/2025 07:09:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:09:19,175 - INFO - 127.0.0.1 - - [14/Jun/2025 07:09:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:11:11,248 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:11] "GET / HTTP/1.1" 200 -
+2025-06-14 07:11:11,517 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:11] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:11:11,604 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:11] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:11:11,607 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:11] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:11:11,625 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:11] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:11:12,012 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:12] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:11:12,106 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:12] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:11:12,371 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:11:29,454 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:29] "GET / HTTP/1.1" 200 -
+2025-06-14 07:11:29,706 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:29] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:11:29,854 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:29] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:11:29,868 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:29] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:11:29,896 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:29] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:11:30,295 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:30] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:11:30,327 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:30] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:11:30,510 - INFO - 127.0.0.1 - - [14/Jun/2025 07:11:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:12:10,678 - INFO - File Existed!:faang_stock_data_20250614.xlsx. Process will be skipped
+2025-06-14 07:12:11,564 - INFO - Dash is running on http://0.0.0.0:10000/
+
+2025-06-14 07:12:11,580 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://192.168.1.109:10000
+2025-06-14 07:12:11,580 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 07:12:17,486 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\Code\python-faang-stock-analyzer\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Code\python-faang-stock-analyzer\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Code\python-faang-stock-analyzer\.venv\Lib\site-packages\flask\app.py", line 878, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "D:\Code\python-faang-stock-analyzer\.venv\Lib\site-packages\flask\app.py", line 1253, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "D:\Code\python-faang-stock-analyzer\.venv\Lib\site-packages\dash\dash.py", line 1449, in _setup_server
+    _validate.validate_layout(self.layout, self._layout_value())
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code\python-faang-stock-analyzer\.venv\Lib\site-packages\dash\_validate.py", line 455, in validate_layout
+    _validate(layout_value)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\Code\python-faang-stock-analyzer\.venv\Lib\site-packages\dash\_validate.py", line 442, in _validate
+    _validate_id(component)
+    ~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Code\python-faang-stock-analyzer\.venv\Lib\site-packages\dash\_validate.py", line 432, in _validate_id
+    raise exceptions.DuplicateIdError(
+    ...<3 lines>...
+    )
+dash.exceptions.DuplicateIdError: Duplicate component id found in the initial layout: `stock-selector`
+2025-06-14 07:12:17,515 - INFO - 127.0.0.1 - - [14/Jun/2025 07:12:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-06-14 07:12:17,802 - INFO - 127.0.0.1 - - [14/Jun/2025 07:12:17] "GET /favicon.ico HTTP/1.1" 200 -
+2025-06-14 07:14:25,135 - INFO - 127.0.0.1 - - [14/Jun/2025 07:14:25] "GET / HTTP/1.1" 200 -
+2025-06-14 07:14:25,385 - INFO - 127.0.0.1 - - [14/Jun/2025 07:14:25] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:14:25,520 - INFO - 127.0.0.1 - - [14/Jun/2025 07:14:25] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:14:25,528 - INFO - 127.0.0.1 - - [14/Jun/2025 07:14:25] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:14:25,562 - INFO - 127.0.0.1 - - [14/Jun/2025 07:14:25] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:14:25,892 - INFO - 127.0.0.1 - - [14/Jun/2025 07:14:25] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:14:25,923 - INFO - 127.0.0.1 - - [14/Jun/2025 07:14:25] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:14:27,542 - INFO - 127.0.0.1 - - [14/Jun/2025 07:14:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:20:38,455 - INFO - 127.0.0.1 - - [14/Jun/2025 07:20:38] "GET / HTTP/1.1" 200 -
+2025-06-14 07:20:38,702 - INFO - 127.0.0.1 - - [14/Jun/2025 07:20:38] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:20:38,855 - INFO - 127.0.0.1 - - [14/Jun/2025 07:20:38] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:20:38,869 - INFO - 127.0.0.1 - - [14/Jun/2025 07:20:38] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:20:38,901 - INFO - 127.0.0.1 - - [14/Jun/2025 07:20:38] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:20:39,264 - INFO - 127.0.0.1 - - [14/Jun/2025 07:20:39] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:20:39,352 - INFO - 127.0.0.1 - - [14/Jun/2025 07:20:39] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:20:39,545 - INFO - 127.0.0.1 - - [14/Jun/2025 07:20:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:24:03,033 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:03] "GET / HTTP/1.1" 200 -
+2025-06-14 07:24:03,260 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:03] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:24:03,421 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:03] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:24:03,424 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:03] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:24:03,432 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:03] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:24:03,773 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:03] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:24:03,801 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:03] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:24:03,988 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:24:39,340 - INFO - File Existed!:faang_stock_data_20250614.xlsx. Process will be skipped
+2025-06-14 07:24:39,896 - INFO - Dash is running on http://0.0.0.0:10000/
+
+2025-06-14 07:24:39,909 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://192.168.1.109:10000
+2025-06-14 07:24:39,909 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 07:24:43,736 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:43] "GET / HTTP/1.1" 200 -
+2025-06-14 07:24:43,961 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:43] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:24:44,095 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:44] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:24:44,102 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:44] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:24:44,126 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:44] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:24:44,434 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:24:44,446 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:44] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:24:44,457 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:44] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:24:45,764 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:24:49,087 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:24:49,535 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:24:57,226 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:57] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:24:57,982 - INFO - 127.0.0.1 - - [14/Jun/2025 07:24:57] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:25:03,361 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:25:03,694 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:25:04,616 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:25:05,372 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:25:06,549 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:25:06,881 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:25:16,191 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:16] "GET / HTTP/1.1" 200 -
+2025-06-14 07:25:16,571 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:16] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:25:16,580 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:16] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:25:16,597 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:16] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:25:17,000 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:17] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:25:17,079 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:17] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:25:17,135 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:17] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:25:17,455 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:25:53,390 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:25:56,778 - INFO - 127.0.0.1 - - [14/Jun/2025 07:25:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:26:51,029 - INFO - 127.0.0.1 - - [14/Jun/2025 07:26:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:32:45,268 - INFO - File Existed!:faang_stock_data_20250614.xlsx. Process will be skipped
+2025-06-14 07:32:45,800 - INFO - Dash is running on http://0.0.0.0:10000/
+
+2025-06-14 07:32:45,816 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://192.168.1.109:10000
+2025-06-14 07:32:45,817 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 07:32:47,731 - INFO - 127.0.0.1 - - [14/Jun/2025 07:32:47] "GET / HTTP/1.1" 200 -
+2025-06-14 07:32:47,990 - INFO - 127.0.0.1 - - [14/Jun/2025 07:32:47] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:32:48,116 - INFO - 127.0.0.1 - - [14/Jun/2025 07:32:48] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:32:48,133 - INFO - 127.0.0.1 - - [14/Jun/2025 07:32:48] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:32:48,178 - INFO - 127.0.0.1 - - [14/Jun/2025 07:32:48] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:32:48,491 - INFO - 127.0.0.1 - - [14/Jun/2025 07:32:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:32:48,519 - INFO - 127.0.0.1 - - [14/Jun/2025 07:32:48] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:32:48,539 - INFO - 127.0.0.1 - - [14/Jun/2025 07:32:48] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:32:49,901 - INFO - 127.0.0.1 - - [14/Jun/2025 07:32:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:33:07,592 - INFO - 127.0.0.1 - - [14/Jun/2025 07:33:07] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:33:08,117 - INFO - 127.0.0.1 - - [14/Jun/2025 07:33:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:33:11,255 - INFO - 127.0.0.1 - - [14/Jun/2025 07:33:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:33:11,978 - INFO - 127.0.0.1 - - [14/Jun/2025 07:33:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:35:02,820 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:02] "GET / HTTP/1.1" 200 -
+2025-06-14 07:35:03,075 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:03] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:35:03,203 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:03] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:35:03,213 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:03] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:35:03,252 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:03] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:35:03,578 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:35:03,707 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:03] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:35:03,713 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:03] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:35:03,959 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:35:23,830 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:23] "GET / HTTP/1.1" 200 -
+2025-06-14 07:35:24,095 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:24] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:35:24,181 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:24] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:35:24,186 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:24] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:35:24,214 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:24] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:35:24,525 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:35:24,621 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:24] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:35:24,652 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:24] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:35:24,852 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:35:28,431 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:35:28,841 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:35:49,291 - INFO - File Existed!:faang_stock_data_20250614.xlsx. Process will be skipped
+2025-06-14 07:35:49,867 - INFO - Dash is running on http://0.0.0.0:10000/
+
+2025-06-14 07:35:49,881 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://192.168.1.109:10000
+2025-06-14 07:35:49,881 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 07:35:53,799 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:53] "GET / HTTP/1.1" 200 -
+2025-06-14 07:35:54,047 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:54] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:35:54,149 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:54] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:35:54,153 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:54] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:35:54,170 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:54] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:35:54,512 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:35:54,520 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:54] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:35:54,545 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:54] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:35:55,950 - INFO - 127.0.0.1 - - [14/Jun/2025 07:35:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:40:36,323 - INFO - 127.0.0.1 - - [14/Jun/2025 07:40:36] "GET / HTTP/1.1" 200 -
+2025-06-14 07:40:36,569 - INFO - 127.0.0.1 - - [14/Jun/2025 07:40:36] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:40:36,809 - INFO - 127.0.0.1 - - [14/Jun/2025 07:40:36] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:40:36,811 - INFO - 127.0.0.1 - - [14/Jun/2025 07:40:36] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:40:36,826 - INFO - 127.0.0.1 - - [14/Jun/2025 07:40:36] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:40:37,158 - INFO - 127.0.0.1 - - [14/Jun/2025 07:40:37] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:40:37,220 - INFO - 127.0.0.1 - - [14/Jun/2025 07:40:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:40:37,282 - INFO - 127.0.0.1 - - [14/Jun/2025 07:40:37] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:40:37,460 - INFO - 127.0.0.1 - - [14/Jun/2025 07:40:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:50:20,401 - INFO - File Existed!:faang_stock_data_20250614.xlsx. Process will be skipped
+2025-06-14 07:50:20,939 - INFO - Dash is running on http://0.0.0.0:10000/
+
+2025-06-14 07:50:20,958 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10000
+ * Running on http://192.168.1.109:10000
+2025-06-14 07:50:20,958 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 07:50:32,927 - INFO - 127.0.0.1 - - [14/Jun/2025 07:50:32] "GET / HTTP/1.1" 200 -
+2025-06-14 07:50:33,140 - INFO - 127.0.0.1 - - [14/Jun/2025 07:50:33] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:50:33,396 - INFO - 127.0.0.1 - - [14/Jun/2025 07:50:33] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:50:33,403 - INFO - 127.0.0.1 - - [14/Jun/2025 07:50:33] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:50:33,434 - INFO - 127.0.0.1 - - [14/Jun/2025 07:50:33] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:50:33,773 - INFO - 127.0.0.1 - - [14/Jun/2025 07:50:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:50:33,776 - INFO - 127.0.0.1 - - [14/Jun/2025 07:50:33] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:50:33,811 - INFO - 127.0.0.1 - - [14/Jun/2025 07:50:33] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:50:35,276 - INFO - 127.0.0.1 - - [14/Jun/2025 07:50:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:51:53,464 - INFO - 127.0.0.1 - - [14/Jun/2025 07:51:53] "GET / HTTP/1.1" 200 -
+2025-06-14 07:51:53,733 - INFO - 127.0.0.1 - - [14/Jun/2025 07:51:53] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:51:53,836 - INFO - 127.0.0.1 - - [14/Jun/2025 07:51:53] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:51:53,848 - INFO - 127.0.0.1 - - [14/Jun/2025 07:51:53] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:51:53,872 - INFO - 127.0.0.1 - - [14/Jun/2025 07:51:53] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:51:54,276 - INFO - 127.0.0.1 - - [14/Jun/2025 07:51:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:51:54,296 - INFO - 127.0.0.1 - - [14/Jun/2025 07:51:54] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:51:54,362 - INFO - 127.0.0.1 - - [14/Jun/2025 07:51:54] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:51:54,594 - INFO - 127.0.0.1 - - [14/Jun/2025 07:51:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:52:37,295 - INFO - 127.0.0.1 - - [14/Jun/2025 07:52:37] "GET / HTTP/1.1" 200 -
+2025-06-14 07:52:37,567 - INFO - 127.0.0.1 - - [14/Jun/2025 07:52:37] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-14 07:52:37,651 - INFO - 127.0.0.1 - - [14/Jun/2025 07:52:37] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-14 07:52:37,664 - INFO - 127.0.0.1 - - [14/Jun/2025 07:52:37] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-14 07:52:37,694 - INFO - 127.0.0.1 - - [14/Jun/2025 07:52:37] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-14 07:52:38,066 - INFO - 127.0.0.1 - - [14/Jun/2025 07:52:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-14 07:52:38,210 - INFO - 127.0.0.1 - - [14/Jun/2025 07:52:38] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-14 07:52:38,241 - INFO - 127.0.0.1 - - [14/Jun/2025 07:52:38] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-14 07:52:38,486 - INFO - 127.0.0.1 - - [14/Jun/2025 07:52:38] "POST /_dash-update-component HTTP/1.1" 200 -

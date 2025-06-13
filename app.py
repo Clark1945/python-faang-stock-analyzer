@@ -1,5 +1,5 @@
 import yfinance as yf
-import os
+import os,json
 import logging as log
 from datetime import datetime
 import pandas as pd
@@ -8,7 +8,9 @@ import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
 from plotly.subplots import make_subplots
+from dash import html
 
+### Global variable
 today_str = datetime.now().strftime('%Y%m%d')
 faang_stock_no = ['META', 'AAPL', 'AMZN', 'NFLX', 'GOOG']
 faang_stock_xlsx_filename = f'faang_stock_data_{today_str}.xlsx'
@@ -17,7 +19,74 @@ log.basicConfig(level=log.INFO,
                 format='%(asctime)s - %(levelname)s - %(message)s',
                 handlers=[log.FileHandler(log_filename),log.StreamHandler()]) # logging on both file and console
 
+class CompanyProfile:
+    '''Company Profile Class.'''
+    def __init__(self, data: dict):
+        self.data = data
+
+    def get_profile_dict(self):
+        return {
+            "公司名稱": self.data.get("longName", ""),
+            "股票代號": self.data.get("symbol", ""),
+            "產業": self.data.get("industry", ""),
+            "產業別": self.data.get("sector", ""),
+            "網站": self.data.get("website", ""),
+            "地址": f"{self.data.get('address1', '')}, {self.data.get('city', '')}, {self.data.get('state', '')} {self.data.get('zip', '')}, {self.data.get('country', '')}",
+            "電話": self.data.get("phone", ""),
+            "員工人數": f"{self.data.get('fullTimeEmployees', 0):,}",
+            "公司介紹": self.data.get("longBusinessSummary", ""),
+            "市值": self.format_large_number(self.data.get("marketCap", 0)),
+            "營收": self.format_large_number(self.data.get("totalRevenue", 0)),
+            "淨利": self.format_large_number(self.data.get("netIncomeToCommon", 0)),
+            "本益比 (PE)": self.data.get("trailingPE", "N/A"),
+            "股息殖利率": f"{self.data.get('dividendYield', 0) * 100:.2f}%",
+            "Beta值": self.data.get("beta", "N/A"),
+            "分析師評價": self.data.get("averageAnalystRating", "N/A")
+        }
+
+    @staticmethod
+    def format_large_number(value):
+        if value >= 1_000_000_000_000:
+            return f"${value / 1_000_000_000_000:.2f}T"
+        elif value >= 1_000_000_000:
+            return f"${value / 1_000_000_000:.2f}B"
+        elif value >= 1_000_000:
+            return f"${value / 1_000_000:.2f}M"
+        else:
+            return f"${value}"
+
+def create_company_card(profile_info):
+    '''Create company card with profile information.'''
+    return html.Div([
+        html.H2(f"{profile_info['公司名稱']} ({profile_info['股票代號']})"),
+        html.Hr(),
+        html.H3("Description"),
+        html.P(profile_info['公司介紹']),
+        html.H3("Company Profile"),
+        html.Ul([
+            html.Li(f"產業: {profile_info['產業']} / {profile_info['產業別']}"),
+            html.Li(f"網站: {profile_info['網站']}"),
+            html.Li(f"地址: {profile_info['地址']}"),
+            html.Li(f"電話: {profile_info['電話']}"),
+            html.Li(f"員工人數: {profile_info['員工人數']}"),
+            html.Li(f"市值: {profile_info['市值']}"),
+            html.Li(f"營收: {profile_info['營收']}"),
+            html.Li(f"淨利: {profile_info['淨利']}"),
+            html.Li(f"本益比 (PE): {profile_info['本益比 (PE)']}"),
+            html.Li(f"股息殖利率: {profile_info['股息殖利率']}"),
+            html.Li(f"Beta值: {profile_info['Beta值']}"),
+            html.Li(f"分析師評價: {profile_info['分析師評價']}"),
+        ], style={'listStyleType': 'none'})
+    ], style={
+        'border': '1px solid #ccc',
+        'padding': '20px',
+        'marginBottom': '20px',
+        'borderRadius': '10px',
+        'backgroundColor': '#f9f9f9'
+    })
+
 class FaangStockDataExporter:
+    '''Export FAANG stock data from Yahoo Finance. Use For download_stock_data and company_profile'''
     def __init__(self, file_name: str = faang_stock_xlsx_filename):
         self.file_name = file_name
 
@@ -28,27 +97,29 @@ class FaangStockDataExporter:
         if os.path.exists(self.file_name):
             log.info(f"File Existed!:{self.file_name}. Process will be skipped")
             return
-
-        # only for test
-        # tickers = yf.Tickers('META AAPL AMZN NFLX GOOG')
-        # tickers.tickers['META'].info
-
-        # Start download
         log.info("Start downloading FAANG stock data...")
-
         try:
             data = yf.download(stock_no_list, period='6mo')
         except Exception as e:
             log.error(f"Download failed: {e}")
             return
-
         if not data.empty:
             data.to_excel(self.file_name)
             log.info(f"downloaded successfully and save as {self.file_name}")
         else:
             log.info("File not generated...some error happened!")
 
+        # download company profile
+        json_file = "company_info.json"
+        json_data={}
+        for stock_no in stock_no_list:
+            dat = yf.Ticker(stock_no)
+            json_data[stock_no] = dat.info
+        with open(json_file, "w", encoding="utf-8") as f:
+            json.dump(json_data, f, indent=4, ensure_ascii=False)
+
 class MonthlyStockDataAnalyzer:
+    '''Encapsulate get from excel the generate dataframe'''
     def __init__(self, file_name: str = faang_stock_xlsx_filename):
         self.file_name = file_name
         self.stock_data_pd = {}
@@ -61,35 +132,9 @@ class MonthlyStockDataAnalyzer:
     def get_stock_df(self, symbol):
         return self.stock_data_pd.get(symbol)
 
-    @DeprecationWarning
-    def plot_close_price(self):
-        if not self.stock_data_pd:
-            log.warning("No stock data available to plot.")
-            return
-
-        fig = go.Figure()
-        for symbol, df in self.stock_data_pd.items():
-            if 'Close' in df.columns:
-                fig.add_trace(go.Scatter(
-                    x=df.index,
-                    y=df['Close'],
-                    mode='lines',
-                    name=symbol
-                ))
-
-        fig.update_layout(
-            title='FAANG Stocks Close Prices - Last 6 Month',
-            xaxis_title='Date',
-            yaxis_title='Price (USD)',
-            template='plotly_dark',
-            hovermode='x unified'
-        )
-
-        fig.show()
 
 exporter = FaangStockDataExporter()
 exporter.download_yahoo_finance_faang_data(faang_stock_no)
-
 analyzer = MonthlyStockDataAnalyzer()
 analyzer.read_excel_and_export_dataframe(faang_stock_no)
 
@@ -97,16 +142,34 @@ analyzer.read_excel_and_export_dataframe(faang_stock_no)
 app = dash.Dash(__name__)
 
 app.layout = html.Div([
-    html.H1("FAANG Stock CandleStick Charts", style={'textAlign': 'center', 'color': '#503D36', 'font-weight': 'bold'}),
+    html.H1("FAANG Dashboard", style={'textAlign': 'center', 'color': '#503D36', 'font-weight': 'bold'}),
     html.P("Select a FAANG stock from the dropdown menu below:"),
     dcc.Dropdown(
         id='stock-selector',
         options=[{'label': symbol, 'value': symbol} for symbol in faang_stock_no],
         value='AAPL'
     ),
+    # 動態公司卡片區域
+    html.Div(id='company-card'),
     dcc.Graph(id='candlestick-graph')
 ])
 
+@app.callback(
+    Output('company-card', 'children'),
+    Input('stock-selector', 'value')
+)
+def update_company_card(symbol):
+    # 讀取 JSON
+    with open("company_info.json", "r", encoding="utf-8") as f:
+        company_data = json.load(f)
+
+    company_profile = CompanyProfile(company_data[symbol])
+
+    info = company_profile.get_profile_dict()
+    if not info:
+        return html.Div(["No data available"])
+    else:
+        return create_company_card(info)
 
 @app.callback(
     Output('candlestick-graph', 'figure'),
@@ -135,13 +198,13 @@ def update_candlestick(symbol):
     # 繪製主圖 (K線 + MA20)
     fig = go.Figure()
 
-    # 建立兩個子圖: (1)價格 + MA (2)RSI
+    # 建立三個子圖: (1)價格 + MA (2)RSI
     fig = make_subplots(
-        rows=2, cols=1,
+        rows=3, cols=1,
         shared_xaxes=True,
-        vertical_spacing=0.1,
-        row_heights=[0.7, 0.3],
-        subplot_titles=(f'{symbol} - Candlestick with MA', 'RSI (14)')
+        vertical_spacing=0.05,
+        row_heights=[0.6, 0.2, 0.2],  # 價格60%、RSI20%、Volume20%
+        subplot_titles=(f'{symbol} - Candlestick with MA', 'RSI (14)', 'Volume')
     )
 
     # CandleStick
@@ -200,10 +263,14 @@ def update_candlestick(symbol):
     fig.add_hline(y=70, line_dash="dash", line_color="gray", row=2, col=1)
     fig.add_hline(y=30, line_dash="dash", line_color="gray", row=2, col=1)
 
-    fig.update_layout(
-        template='plotly_dark',
-        height=1000
-    )
+    fig.add_trace(go.Bar(
+        x=df.index,
+        y=df['Volume'],
+        marker_color='lightblue',
+        name='Volume'
+    ), row=3, col=1)
+
+    fig.update_layout(template='plotly_dark')
 
     return fig
 
