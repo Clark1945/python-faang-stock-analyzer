@@ -7,10 +7,11 @@ import plotly.graph_objs as go
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
+from plotly.subplots import make_subplots
 
-faang_stock_no = ['META', 'AAPL', 'AMZN', 'NFLX', 'GOOG']
-faang_stock_xlsx_filename = 'faang_stock_data.xlsx'
 today_str = datetime.now().strftime('%Y%m%d')
+faang_stock_no = ['META', 'AAPL', 'AMZN', 'NFLX', 'GOOG']
+faang_stock_xlsx_filename = f'faang_stock_data_{today_str}.xlsx'
 log_filename = f'faang_{today_str}.log'
 log.basicConfig(level=log.INFO,
                 format='%(asctime)s - %(levelname)s - %(message)s',
@@ -34,7 +35,12 @@ class FaangStockDataExporter:
 
         # Start download
         log.info("Start downloading FAANG stock data...")
-        data = yf.download(stock_no_list, period='1mo')
+
+        try:
+            data = yf.download(stock_no_list, period='6mo')
+        except Exception as e:
+            log.error(f"Download failed: {e}")
+            return
 
         if not data.empty:
             data.to_excel(self.file_name)
@@ -72,7 +78,7 @@ class MonthlyStockDataAnalyzer:
                 ))
 
         fig.update_layout(
-            title='FAANG Stocks Close Prices - Last 1 Month',
+            title='FAANG Stocks Close Prices - Last 6 Month',
             xaxis_title='Date',
             yaxis_title='Price (USD)',
             template='plotly_dark',
@@ -112,11 +118,31 @@ def update_candlestick(symbol):
     if df is None or df.empty:
         return go.Figure()
 
-    # 計算 MA (以 20 日為例)
+    # 計算 MA5、MA20、MA60 移動平均線
+    df['MA5'] = df['Close'].rolling(window=5).mean()
     df['MA20'] = df['Close'].rolling(window=20).mean()
+    df['MA60'] = df['Close'].rolling(window=60).mean()
+
+    # 計算 RSI (14日)
+    delta = df['Close'].diff()
+    gain = delta.where(delta > 0, 0)
+    loss = -delta.where(delta < 0, 0)
+    avg_gain = gain.rolling(window=14).mean()
+    avg_loss = loss.rolling(window=14).mean()
+    rs = avg_gain / avg_loss
+    df['RSI'] = 100 - (100 / (1 + rs))
 
     # 繪製主圖 (K線 + MA20)
     fig = go.Figure()
+
+    # 建立兩個子圖: (1)價格 + MA (2)RSI
+    fig = make_subplots(
+        rows=2, cols=1,
+        shared_xaxes=True,
+        vertical_spacing=0.1,
+        row_heights=[0.7, 0.3],
+        subplot_titles=(f'{symbol} - Candlestick with MA', 'RSI (14)')
+    )
 
     # CandleStick
     fig.add_trace(go.Candlestick(
@@ -128,13 +154,22 @@ def update_candlestick(symbol):
         name='Candlestick'
     ))
     fig.update_layout(
-        title=f'{symbol} - CandleStick Chart (Last one month)',
+        title=f'{symbol} - CandleStick Chart (Last 6 month)',
         xaxis_title='Date',
         yaxis_title='Price (USD)',
         template='plotly_dark'
     )
 
-    # MA20 線
+    # MA5 (紅色)
+    fig.add_trace(go.Scatter(
+        x=df.index,
+        y=df['MA5'],
+        mode='lines',
+        line=dict(color='red', width=1.5),
+        name='MA5'
+    ))
+
+    # MA20 (橘色)
     fig.add_trace(go.Scatter(
         x=df.index,
         y=df['MA20'],
@@ -142,20 +177,36 @@ def update_candlestick(symbol):
         line=dict(color='orange', width=1.5),
         name='MA20'
     ))
+
+    # MA60 (綠色)
+    fig.add_trace(go.Scatter(
+        x=df.index,
+        y=df['MA60'],
+        mode='lines',
+        line=dict(color='green', width=1.5),
+        name='MA60'
+    ))
+
+    # RSI 子圖
+    fig.add_trace(go.Scatter(
+        x=df.index,
+        y=df['RSI'],
+        mode='lines',
+        line=dict(color='purple', width=1.5),
+        name='RSI (14)'
+    ), row=2, col=1)
+
+    # RSI 標準線（超買、超賣區）
+    fig.add_hline(y=70, line_dash="dash", line_color="gray", row=2, col=1)
+    fig.add_hline(y=30, line_dash="dash", line_color="gray", row=2, col=1)
+
     fig.update_layout(
-        title=f'{symbol} - CandleStick Chart with MA20 (Last one month)',
-        xaxis_title='Date',
-        yaxis_title='Price (USD)',
-        template='plotly_dark'
+        template='plotly_dark',
+        height=1000
     )
 
     return fig
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
-    # analyzer.plot_close_price()  # << 加這一行畫圖
 
