@@ -116,6 +116,7 @@ class FaangStockDataExporter:
         for stock_no in stock_no_list:
             dat = yf.Ticker(stock_no)
             json_data[stock_no] = dat.info
+
         with open(json_file, "w", encoding="utf-8") as f:
             json.dump(json_data, f, indent=4, ensure_ascii=False)
 
