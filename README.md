@@ -20,4 +20,4 @@ Show FAANG (META、Amazon、Apple、Netflix、Google) stock information. Analyzi
 
 ### Page
 You can check more detail through this link: 
-[FAANG DASHBOARD]([網址](https://python-faang-stock-analyzer.onrender.com/)) 
+[FAANG DASHBOARD](https://python-faang-stock-analyzer.onrender.com/]) 
