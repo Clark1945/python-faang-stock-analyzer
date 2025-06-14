@@ -1,7 +1,6 @@
 import yfinance as yf
 import os,json
 import logging as log
-from datetime import datetime
 import pandas as pd
 import plotly.graph_objs as go
 import dash
@@ -9,6 +8,7 @@ from dash import dcc, html
 from dash.dependencies import Input, Output
 from plotly.subplots import make_subplots
 from dash import html
+from datetime import datetime, timedelta
 
 ### Global variable
 today_str = datetime.now().strftime('%Y%m%d')
@@ -18,6 +18,7 @@ log_filename = f'faang_{today_str}.log'
 log.basicConfig(level=log.INFO,
                 format='%(asctime)s - %(levelname)s - %(message)s',
                 handlers=[log.FileHandler(log_filename),log.StreamHandler()]) # logging on both file and console
+company_info = f"company_info{today_str}.json"
 
 class CompanyProfile:
     '''Company Profile Class.'''
@@ -110,7 +111,7 @@ class FaangStockDataExporter:
             log.info("File not generated...some error happened!")
 
         # download company profile
-        json_file = "company_info.json"
+        json_file = company_info
         json_data={}
         for stock_no in stock_no_list:
             dat = yf.Ticker(stock_no)
@@ -132,7 +133,22 @@ class MonthlyStockDataAnalyzer:
     def get_stock_df(self, symbol):
         return self.stock_data_pd.get(symbol)
 
+def delete_yesterday_file(prefix="faang_stock_data_", suffix=".xlsx"):
+    yesterday = datetime.now() - timedelta(days=1)
+    yesterday_str = yesterday.strftime('%Y%m%d')
+    filename = f"{prefix}{yesterday_str}{suffix}"
 
+    if os.path.exists(filename):
+        try:
+            os.remove(filename)
+            log.info(f"Yesterday's file deleted: {filename}")
+        except Exception as e:
+            log.error(f"Failed to delete {filename}: {e}")
+    else:
+        log.info(f"No yesterday's file found: {filename}")
+
+delete_yesterday_file("faang_stock_data_",".xlsx")
+delete_yesterday_file("company_info_",".json")
 exporter = FaangStockDataExporter()
 exporter.download_yahoo_finance_faang_data(faang_stock_no)
 analyzer = MonthlyStockDataAnalyzer()
@@ -160,7 +176,7 @@ app.layout = html.Div([
 )
 def update_company_card(symbol):
     # 讀取 JSON
-    with open("company_info.json", "r", encoding="utf-8") as f:
+    with open(company_info, "r", encoding="utf-8") as f:
         company_data = json.load(f)
 
     company_profile = CompanyProfile(company_data[symbol])
